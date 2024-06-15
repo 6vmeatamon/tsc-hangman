@@ -1,0 +1,22 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/hangman.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hirum",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/figlet": "^1.5.8",
+    "@types/node": "^20.13.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.6.0"
+  }
+}

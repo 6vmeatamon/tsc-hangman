@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  node-hangman:
+    container_name: node-hangman
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/node:/app
+      - nmodules:/app/node_modules # 下で定義したボリューム名:ビルド時のコンテナ内のボリュームパス
+    tty: true
+# 名前付きボリュームの名前を下記で定義
+volumes:
+  nmodules:
+
+#  python:
+#    container_name: python
+#    build:
+#      context: .
+#      dockerfile: ./docker/python/Dockerfile
+#    ports:
+#      - 5000:5000
+#    tty: true
+#    volumes:
+#      - ./app/python/:/app
+
